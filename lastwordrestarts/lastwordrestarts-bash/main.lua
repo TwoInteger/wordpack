@@ -1,4 +1,4 @@
-print("make your own \"but every time a word is repeated it loops to its last use and restarts\" video")
+print("make your own \"but every word goes to its last use and restarts\" video")
 Idx = 0
 Timeidx = 0
 local isbeginning = true
