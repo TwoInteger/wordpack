@@ -86,9 +86,9 @@ print(Wordstorepeat[1])
 Timeidx = 1
 while Timeidx <= #Wordstorepeat do
     os.execute(string.format("ffmpeg -i %s -ss %s -to %s -c:v libx264 -crf 20 -preset veryfast tempry/%d.mkv", video, Wordstorepeat[Timeidx], Wordstorepeat[Timeidx+1], Timeidx))
-    os.execute(string.format("echo \"file tempry/%d.mkv\" >> array.txt", Timeidx))
+    os.execute(string.format("echo file tempry/%d.mkv >> array.txt", Timeidx))
     os.execute(string.format("ffmpeg -i %s -ss %s -c:v libx264 -crf 20 -preset veryfast tempry/%d.mkv", video, Wordstorepeat[Timeidx+2], Timeidx+1))
-    os.execute(string.format("echo \"file tempry/%d.mkv\" >> array.txt", Timeidx+1))
+    os.execute(string.format("echo file tempry/%d.mkv >> array.txt", Timeidx+1))
     print(Timeidx, Timeidx+1)
     Timeidx = Timeidx + 3
 end
